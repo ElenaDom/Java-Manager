@@ -9,9 +9,9 @@ import lombok.*;
 
 public class Film {
     int id;
-    String filmUrl;
-    String filmName;
-    String filmGenre;
+    private String filmUrl;
+    private String filmName;
+    private String filmGenre;
     boolean premiereTomorrow;
 
 }

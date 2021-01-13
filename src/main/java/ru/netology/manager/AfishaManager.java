@@ -7,8 +7,8 @@ import ru.netology.domain.Film;
 @Data
 
 public class AfishaManager {
-    Film[] films = new Film[0];
-    int filmsNumberToNext = 10;
+     Film[] films = new Film[0];
+     int filmsToNext = 10;
 
 
     public void addFilm(Film film) {
@@ -26,6 +26,12 @@ public class AfishaManager {
             int index = films.length - i - 1;
             result[i] = films[index];
         }
+        return result;
+    }
+    public Film[] getFilm() {
+        Film[] result = new Film[filmsToNext];
+        Film[] tmp = getAll();
+        System.arraycopy(tmp, 0, result, 0, filmsToNext);
         return result;
     }
 
